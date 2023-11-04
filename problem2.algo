@@ -1,0 +1,19 @@
+PROCEDURE dot_product(var1 , var2  : ARRAY_OF INTEGER[100]; VAR ps:INTEGER)
+VAR
+    set_declarations
+BEGIN
+    ps := 0;
+    FOR i FROM 0 TO v1.length -1  DO
+        ps := ps + v1[i] * v2[i];
+    END_FOR
+END
+
+FUNCTION are_orthogonal(v1 , v2  : ARRAY_OF [100]; ) :BOOLEAN
+VAR
+    ps : INTEGER ;
+    dot_product(v1 , v2 , ps) ;
+    are_orthogonal := (ps = 0);
+BEGIN
+    set_instructions
+    RETURN value ;
+END

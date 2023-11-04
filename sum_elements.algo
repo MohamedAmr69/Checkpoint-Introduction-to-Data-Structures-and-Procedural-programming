@@ -1,0 +1,30 @@
+PROCEDURE sumofelements(set1 , set2 : ARRAY_OF INTEGER[100]; )
+VAR
+    i : INTEGER ;
+    sum := 0;
+BEGIN
+    FOR i FROM 0 TO set1.length DO
+        IF (set1[i] <> 0 And set1[i] not in set2[i] ) THEN
+            sum := sum + set1[i];
+            END_IF
+    END_FOR
+
+    FOR i FROM 0 TO set2.length DO
+        IF (set2[i] <> 0 And set2[i] not in set1[i] ) THEN
+            sum := sum + set2[i] ;
+            END_IF
+    END_FOR
+END
+
+
+ALGORITHM sumofdistnictelements
+VAR
+    set1 : ARRAY_OF INTEGER[3];
+    set2 : ARRAY_OF INTEGER[4];
+    sum : INTEGER ;
+BEGIN
+    set1 :={3,1,7,9};
+    set2:={2,4,1,9,3};
+    sumofelements(set1 , set2 . sum);
+    Write(sum);
+END
